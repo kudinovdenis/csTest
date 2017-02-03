@@ -9,6 +9,10 @@
 import UIKit
 import Photos
 
+protocol ViewControllerDelegate: class {
+    func selected(_ image: PhotoObject)
+}
+
 class ViewController: BasicViewController {
   
   let photoSearchClient = PhotoSearch()
@@ -19,6 +23,8 @@ class ViewController: BasicViewController {
   var processedImageView: UIImageView!
   let processor = Processor()
   
+    weak var delegate: ViewControllerDelegate?
+    
   var assets = [PhotoListModel]()
   
   override init(frame: CGRect) {
@@ -30,6 +36,7 @@ class ViewController: BasicViewController {
     fatalError("init(coder:) has not been implemented")
   }
   
+    
   func setupView(frame: CGRect) {
     setupStartButton()
     setupCollectionView()
@@ -51,6 +58,7 @@ class ViewController: BasicViewController {
   }
   
   override func viewWillLayoutSubviews() {
+    print("VC - \(self.view.frame)")
     super.viewWillLayoutSubviews()
     startButton.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
     photosCollectionView.frame = CGRect(x: 0,
@@ -69,6 +77,7 @@ class ViewController: BasicViewController {
     photosCollectionView.backgroundColor = UIColor.gray
     photosCollectionView.register(PhotosListCell.self, forCellWithReuseIdentifier: "PhotosListCell")
     photosCollectionView.dataSource = self
+    photosCollectionView.delegate = self
   }
   
   func setupProcessedImageView() {
@@ -112,8 +121,7 @@ class ViewController: BasicViewController {
   func openGrouppedController() {
     
   }
-  
-  
+    
   func processAllPhotos() {
     DispatchQueue.global(qos: .userInitiated).async {
       let facedPhotos = self.photoSearchClient.findAll(with: CIDetectorTypeFace, in: self.assets, progressHandler: { processed, total in
@@ -195,7 +203,7 @@ extension ViewController: UICollectionViewDataSource {
     }
     return cell!
   }
-  
+    
   func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
   }
@@ -204,6 +212,14 @@ extension ViewController: UICollectionViewDataSource {
     return assets.count
   }
   
+}
+
+extension ViewController : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photo = self.assets[indexPath.row]
+        guard let realmPhoto = Storage.shared.realm.objects(PhotoObject.self).filter(NSPredicate(format: "assetID = %@", photo.asset.localIdentifier)).first else { return }
+        self.delegate?.selected(realmPhoto)
+    }
 }
 
 extension ViewController: ProcessorMSVisionDelegate {

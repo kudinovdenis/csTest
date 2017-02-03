@@ -8,16 +8,28 @@
 
 import UIKit
 import Messages
+import Photos
 
 class MessagesViewController: MSMessagesAppViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+    }
+    
+    lazy var vc : ViewController = {
+        let vc = ViewController(frame: self.view.bounds)
+        vc.delegate = self
+        return vc
+    }()
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        self.view.backgroundColor = .green
-        
-        
+        let vc = self.vc
+        self.addChildViewController(vc)
+        self.view.addSubview(vc.view)
+        vc.didMove(toParentViewController: self)
     }
     
     lazy var button : UIButton = {
@@ -31,8 +43,6 @@ class MessagesViewController: MSMessagesAppViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        self.button.frame = CGRect(x: 15, y: 100, width: 150, height: 50)
-        self.view.addSubview(self.button)
     }
     
     override func didReceiveMemoryWarning() {
@@ -86,8 +96,49 @@ class MessagesViewController: MSMessagesAppViewController {
         // Called after the extension transitions to a new presentation style.
     
         // Use this method to finalize any behaviors associated with the change in presentation style.
+        var frame : CGRect = self.view.bounds
+        if presentationStyle == .expanded {
+            frame.origin.y += 120
+            frame.size.height -= 60
+        }
+        print("VC SET - \(frame)")
+        self.vc.view.frame = frame
     }
 
+}
+
+extension MessagesViewController: ViewControllerDelegate {
+    
+    func selected(_ photo: PhotoObject) {
+        guard let conversation : MSConversation = self.activeConversation else {
+            fatalError()
+        }
+        
+        let layout = MSMessageTemplateLayout()
+        let fetch = PHAsset.fetchAssets(withLocalIdentifiers: [photo.assetID!], options: nil)
+        let asset = fetch.firstObject!
+        let manager = PHImageManager.default()
+        let option = PHImageRequestOptions()
+        var image = UIImage()
+        option.isSynchronous = true
+        manager.requestImage(for: asset, targetSize:  CGSize(width: asset.pixelWidth, height: asset.pixelHeight), contentMode: .aspectFit, options: option, resultHandler: {(result, info)->Void in
+            image = result!
+        })
+        
+        layout.imageTitle = photo.tags.first?.stringValue
+        layout.imageSubtitle = photo.tags[1].stringValue
+        layout.caption = photo.tags[2].stringValue
+        layout.subcaption = photo.tags[3].stringValue
+        layout.trailingCaption = "Shared via Acronis™ True Image™"
+        
+        layout.image = image
+
+        let message = MSMessage()
+        message.layout = layout
+        
+        conversation.insert(message)
+    }
+    
 }
 
 extension MessagesViewController {

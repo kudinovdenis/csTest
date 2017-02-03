@@ -34,7 +34,28 @@
 		22D05E5F1E44AC26004CED84 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D05E5E1E44AC26004CED84 /* MessagesViewController.swift */; };
 		22D05E641E44AC26004CED84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D05E631E44AC26004CED84 /* Assets.xcassets */; };
 		22D05E681E44AC26004CED84 /* iMessExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 22D05E5A1E44AC26004CED84 /* iMessExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		22D05E6D1E44CF6B004CED84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0340DEDA1E3BA0EB006A0C06 /* ViewController.swift */; };
+		22D05E781E44CFC8004CED84 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034579551E44A0AA003427D8 /* Storage.swift */; };
+		22D05E791E44CFC8004CED84 /* PhotoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034579571E44A191003427D8 /* PhotoObject.swift */; };
+		22D05E7A1E44CFC8004CED84 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0340DEF31E3BAE2E006A0C06 /* BasicViewController.swift */; };
+		22D05E7B1E44CFC8004CED84 /* MessageWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0340DEF51E3BB21A006A0C06 /* MessageWindow.swift */; };
+		22D05E7C1E44CFC8004CED84 /* PhotosListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0340DEF01E3BAB07006A0C06 /* PhotosListCell.swift */; };
+		22D05E7D1E44CFC8004CED84 /* PhotoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FE3AEC1E40F01000C96D5B /* PhotoListModel.swift */; };
+		22D05E7E1E44CFC8004CED84 /* MicrosoftImageSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BD41E448E910043C985 /* MicrosoftImageSearchAPI.swift */; };
+		22D05E7F1E44CFC8004CED84 /* PhotoSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0340DEED1E3BA4F8006A0C06 /* PhotoSearchAPI.swift */; };
+		22D05E801E44CFC8004CED84 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FE3AEE1E4210A200C96D5B /* Box.swift */; };
+		22D05E811E44CFC8004CED84 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034579591E44AD4E003427D8 /* Processor.swift */; };
+		22D05E821E44D08F004CED84 /* AnalyzeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDA1E448F880043C985 /* AnalyzeImage.swift */; };
+		22D05E831E44D0A1004CED84 /* CognitiveServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BD81E448F880043C985 /* CognitiveServices.swift */; };
+		22D05E841E44D0A4004CED84 /* JSONNSDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BE01E448F880043C985 /* JSONNSDataExtension.swift */; };
+		22D05E851E44D0AA004CED84 /* GetThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDB1E448F880043C985 /* GetThumbnail.swift */; };
+		22D05E861E44D0AA004CED84 /* ListDomainSpecificModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDC1E448F880043C985 /* ListDomainSpecificModels.swift */; };
+		22D05E871E44D0AA004CED84 /* OCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDD1E448F880043C985 /* OCR.swift */; };
+		22D05E881E44D0AA004CED84 /* RecognizeDomainSpecificContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDE1E448F880043C985 /* RecognizeDomainSpecificContent.swift */; };
+		22D05E891E44D0AA004CED84 /* TagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDF1E448F880043C985 /* TagImage.swift */; };
+		22D05E8A1E44D0B0004CED84 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BE21E448F880043C985 /* StringExtension.swift */; };
 		CA1BC6A2C594BBD9B6CC095A /* Pods_csTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9076F5C4DD51888640D9F5 /* Pods_csTest.framework */; };
+		F8795FC71E69FCECDDECAA51 /* Pods_iMessExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6606FB33EE1B1B62A0795F35 /* Pods_iMessExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,13 +109,16 @@
 		03FE3AEC1E40F01000C96D5B /* PhotoListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListModel.swift; sourceTree = "<group>"; };
 		03FE3AEE1E4210A200C96D5B /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		060A288EDE93501D18B3D518 /* Pods-csTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-csTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-csTest/Pods-csTest.release.xcconfig"; sourceTree = "<group>"; };
+		0F1EEA1C88B294B6A761C5FD /* Pods-iMessExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMessExtension/Pods-iMessExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		22D05E5A1E44AC26004CED84 /* iMessExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iMessExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D05E5B1E44AC26004CED84 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		22D05E5E1E44AC26004CED84 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		22D05E631E44AC26004CED84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22D05E651E44AC26004CED84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6606FB33EE1B1B62A0795F35 /* Pods_iMessExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMessExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27A30892EA438F4E7E3983E /* Pods-csTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-csTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-csTest/Pods-csTest.debug.xcconfig"; sourceTree = "<group>"; };
 		CD9076F5C4DD51888640D9F5 /* Pods_csTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_csTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0346B265BAC67AC60C8542B /* Pods-iMessExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMessExtension/Pods-iMessExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D05E5C1E44AC26004CED84 /* Messages.framework in Frameworks */,
+				F8795FC71E69FCECDDECAA51 /* Pods_iMessExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +278,7 @@
 			children = (
 				CD9076F5C4DD51888640D9F5 /* Pods_csTest.framework */,
 				22D05E5B1E44AC26004CED84 /* Messages.framework */,
+				6606FB33EE1B1B62A0795F35 /* Pods_iMessExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -272,6 +298,8 @@
 			children = (
 				B27A30892EA438F4E7E3983E /* Pods-csTest.debug.xcconfig */,
 				060A288EDE93501D18B3D518 /* Pods-csTest.release.xcconfig */,
+				0F1EEA1C88B294B6A761C5FD /* Pods-iMessExtension.debug.xcconfig */,
+				F0346B265BAC67AC60C8542B /* Pods-iMessExtension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -305,9 +333,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22D05E6B1E44AC26004CED84 /* Build configuration list for PBXNativeTarget "iMessExtension" */;
 			buildPhases = (
+				0C35A11FE394FE0E69E40626 /* [CP] Check Pods Manifest.lock */,
 				22D05E561E44AC26004CED84 /* Sources */,
 				22D05E571E44AC26004CED84 /* Frameworks */,
 				22D05E581E44AC26004CED84 /* Resources */,
+				8D50A1B15B7C826C78F5C089 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -380,6 +410,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0C35A11FE394FE0E69E40626 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		6EEA2885BA8574768E86FFDD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -425,6 +470,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		8D50A1B15B7C826C78F5C089 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iMessExtension/Pods-iMessExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -460,7 +520,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D05E861E44D0AA004CED84 /* ListDomainSpecificModels.swift in Sources */,
+				22D05E831E44D0A1004CED84 /* CognitiveServices.swift in Sources */,
+				22D05E851E44D0AA004CED84 /* GetThumbnail.swift in Sources */,
+				22D05E6D1E44CF6B004CED84 /* ViewController.swift in Sources */,
+				22D05E881E44D0AA004CED84 /* RecognizeDomainSpecificContent.swift in Sources */,
+				22D05E7E1E44CFC8004CED84 /* MicrosoftImageSearchAPI.swift in Sources */,
+				22D05E841E44D0A4004CED84 /* JSONNSDataExtension.swift in Sources */,
+				22D05E7A1E44CFC8004CED84 /* BasicViewController.swift in Sources */,
+				22D05E8A1E44D0B0004CED84 /* StringExtension.swift in Sources */,
+				22D05E7F1E44CFC8004CED84 /* PhotoSearchAPI.swift in Sources */,
+				22D05E791E44CFC8004CED84 /* PhotoObject.swift in Sources */,
+				22D05E801E44CFC8004CED84 /* Box.swift in Sources */,
+				22D05E821E44D08F004CED84 /* AnalyzeImage.swift in Sources */,
+				22D05E891E44D0AA004CED84 /* TagImage.swift in Sources */,
+				22D05E811E44CFC8004CED84 /* Processor.swift in Sources */,
+				22D05E871E44D0AA004CED84 /* OCR.swift in Sources */,
+				22D05E7B1E44CFC8004CED84 /* MessageWindow.swift in Sources */,
 				22D05E5F1E44AC26004CED84 /* MessagesViewController.swift in Sources */,
+				22D05E7C1E44CFC8004CED84 /* PhotosListCell.swift in Sources */,
+				22D05E7D1E44CFC8004CED84 /* PhotoListModel.swift in Sources */,
+				22D05E781E44CFC8004CED84 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +693,7 @@
 		};
 		22D05E691E44AC26004CED84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F1EEA1C88B294B6A761C5FD /* Pods-iMessExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 4ER6MMX235;
@@ -628,6 +709,7 @@
 		};
 		22D05E6A1E44AC26004CED84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0346B265BAC67AC60C8542B /* Pods-iMessExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 4ER6MMX235;
@@ -669,6 +751,7 @@
 				22D05E6A1E44AC26004CED84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
