@@ -24,13 +24,14 @@ class MessagesViewController: MSMessagesAppViewController {
         let res = UIButton()
 
         res.setTitle("Testing", for: .normal)
+        res.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         
         return res
     }()
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
+        self.button.frame = CGRect(x: 15, y: 100, width: 150, height: 50)
         self.view.addSubview(self.button)
     }
     
@@ -85,6 +86,36 @@ class MessagesViewController: MSMessagesAppViewController {
         // Called after the extension transitions to a new presentation style.
     
         // Use this method to finalize any behaviors associated with the change in presentation style.
+    }
+
+}
+
+extension MessagesViewController {
+    
+    func buttonPressed() throws {
+        guard let conversation : MSConversation = self.activeConversation else {
+            fatalError()
+        }
+        let url = URL(string: "https://pp.vk.me/c633525/v633525333/1ec7f/0xVbf6evIiw.jpg")!
+        let data = try Data(contentsOf: url)
+        
+        let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let path = dir?.appendingPathComponent("image.png")
+        try? data.write(to: path!)
+//        conversation.insertAttachment(path!, withAlternateFilename: "test")
+
+        
+        let layout = MSMessageTemplateLayout()
+        layout.image = UIImage(data: data)
+        layout.caption = "Acronis True Image"
+        layout.imageTitle = "Hi"
+        layout.imageSubtitle = "Ti Pidor"
+        
+        let message = MSMessage()
+        message.layout = layout
+        message.url = URL(string: "emptyURL")
+        
+        conversation.insert(message)
     }
 
 }
