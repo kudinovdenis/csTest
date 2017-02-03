@@ -15,6 +15,16 @@
 		0340DEF11E3BAB07006A0C06 /* PhotosListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0340DEF01E3BAB07006A0C06 /* PhotosListCell.swift */; };
 		0340DEF41E3BAE2E006A0C06 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0340DEF31E3BAE2E006A0C06 /* BasicViewController.swift */; };
 		0340DEF61E3BB21A006A0C06 /* MessageWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0340DEF51E3BB21A006A0C06 /* MessageWindow.swift */; };
+		03F18BD51E448E910043C985 /* MicrosoftImageSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BD41E448E910043C985 /* MicrosoftImageSearchAPI.swift */; };
+		03F18BE31E448F880043C985 /* CognitiveServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BD81E448F880043C985 /* CognitiveServices.swift */; };
+		03F18BE41E448F880043C985 /* AnalyzeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDA1E448F880043C985 /* AnalyzeImage.swift */; };
+		03F18BE51E448F880043C985 /* GetThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDB1E448F880043C985 /* GetThumbnail.swift */; };
+		03F18BE61E448F880043C985 /* ListDomainSpecificModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDC1E448F880043C985 /* ListDomainSpecificModels.swift */; };
+		03F18BE71E448F880043C985 /* OCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDD1E448F880043C985 /* OCR.swift */; };
+		03F18BE81E448F880043C985 /* RecognizeDomainSpecificContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDE1E448F880043C985 /* RecognizeDomainSpecificContent.swift */; };
+		03F18BE91E448F880043C985 /* TagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDF1E448F880043C985 /* TagImage.swift */; };
+		03F18BEA1E448F880043C985 /* JSONNSDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BE01E448F880043C985 /* JSONNSDataExtension.swift */; };
+		03F18BEB1E448F880043C985 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BE21E448F880043C985 /* StringExtension.swift */; };
 		03FE3AED1E40F01000C96D5B /* PhotoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FE3AEC1E40F01000C96D5B /* PhotoListModel.swift */; };
 		03FE3AEF1E4210A200C96D5B /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FE3AEE1E4210A200C96D5B /* Box.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +40,16 @@
 		0340DEF01E3BAB07006A0C06 /* PhotosListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosListCell.swift; sourceTree = "<group>"; };
 		0340DEF31E3BAE2E006A0C06 /* BasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		0340DEF51E3BB21A006A0C06 /* MessageWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageWindow.swift; sourceTree = "<group>"; };
+		03F18BD41E448E910043C985 /* MicrosoftImageSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrosoftImageSearchAPI.swift; sourceTree = "<group>"; };
+		03F18BD81E448F880043C985 /* CognitiveServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CognitiveServices.swift; sourceTree = "<group>"; };
+		03F18BDA1E448F880043C985 /* AnalyzeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeImage.swift; sourceTree = "<group>"; };
+		03F18BDB1E448F880043C985 /* GetThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetThumbnail.swift; sourceTree = "<group>"; };
+		03F18BDC1E448F880043C985 /* ListDomainSpecificModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDomainSpecificModels.swift; sourceTree = "<group>"; };
+		03F18BDD1E448F880043C985 /* OCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCR.swift; sourceTree = "<group>"; };
+		03F18BDE1E448F880043C985 /* RecognizeDomainSpecificContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognizeDomainSpecificContent.swift; sourceTree = "<group>"; };
+		03F18BDF1E448F880043C985 /* TagImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagImage.swift; sourceTree = "<group>"; };
+		03F18BE01E448F880043C985 /* JSONNSDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONNSDataExtension.swift; sourceTree = "<group>"; };
+		03F18BE21E448F880043C985 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		03FE3AEC1E40F01000C96D5B /* PhotoListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoListModel.swift; sourceTree = "<group>"; };
 		03FE3AEE1E4210A200C96D5B /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +107,7 @@
 		0340DEEC1E3BA4E8006A0C06 /* PhotoSearch */ = {
 			isa = PBXGroup;
 			children = (
+				03F18BD31E448E750043C985 /* Microsoft */,
 				0340DEED1E3BA4F8006A0C06 /* PhotoSearchAPI.swift */,
 				03FE3AEE1E4210A200C96D5B /* Box.swift */,
 			);
@@ -109,6 +130,55 @@
 				0340DEF51E3BB21A006A0C06 /* MessageWindow.swift */,
 			);
 			path = Basic;
+			sourceTree = "<group>";
+		};
+		03F18BD31E448E750043C985 /* Microsoft */ = {
+			isa = PBXGroup;
+			children = (
+				03F18BD61E448F880043C985 /* SDK */,
+				03F18BD41E448E910043C985 /* MicrosoftImageSearchAPI.swift */,
+			);
+			path = Microsoft;
+			sourceTree = "<group>";
+		};
+		03F18BD61E448F880043C985 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				03F18BD71E448F880043C985 /* CognitiveServices */,
+				03F18BE11E448F880043C985 /* Swift Extensions */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		03F18BD71E448F880043C985 /* CognitiveServices */ = {
+			isa = PBXGroup;
+			children = (
+				03F18BD81E448F880043C985 /* CognitiveServices.swift */,
+				03F18BD91E448F880043C985 /* ComputerVision */,
+				03F18BE01E448F880043C985 /* JSONNSDataExtension.swift */,
+			);
+			path = CognitiveServices;
+			sourceTree = "<group>";
+		};
+		03F18BD91E448F880043C985 /* ComputerVision */ = {
+			isa = PBXGroup;
+			children = (
+				03F18BDA1E448F880043C985 /* AnalyzeImage.swift */,
+				03F18BDB1E448F880043C985 /* GetThumbnail.swift */,
+				03F18BDC1E448F880043C985 /* ListDomainSpecificModels.swift */,
+				03F18BDD1E448F880043C985 /* OCR.swift */,
+				03F18BDE1E448F880043C985 /* RecognizeDomainSpecificContent.swift */,
+				03F18BDF1E448F880043C985 /* TagImage.swift */,
+			);
+			path = ComputerVision;
+			sourceTree = "<group>";
+		};
+		03F18BE11E448F880043C985 /* Swift Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				03F18BE21E448F880043C985 /* StringExtension.swift */,
+			);
+			path = "Swift Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,13 +253,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F18BEA1E448F880043C985 /* JSONNSDataExtension.swift in Sources */,
+				03F18BE71E448F880043C985 /* OCR.swift in Sources */,
 				0340DEF11E3BAB07006A0C06 /* PhotosListCell.swift in Sources */,
+				03F18BD51E448E910043C985 /* MicrosoftImageSearchAPI.swift in Sources */,
 				03FE3AED1E40F01000C96D5B /* PhotoListModel.swift in Sources */,
+				03F18BE81E448F880043C985 /* RecognizeDomainSpecificContent.swift in Sources */,
 				0340DEF41E3BAE2E006A0C06 /* BasicViewController.swift in Sources */,
+				03F18BE31E448F880043C985 /* CognitiveServices.swift in Sources */,
 				0340DEEE1E3BA4F8006A0C06 /* PhotoSearchAPI.swift in Sources */,
+				03F18BE91E448F880043C985 /* TagImage.swift in Sources */,
 				0340DEF61E3BB21A006A0C06 /* MessageWindow.swift in Sources */,
 				03FE3AEF1E4210A200C96D5B /* Box.swift in Sources */,
 				0340DEDB1E3BA0EB006A0C06 /* ViewController.swift in Sources */,
+				03F18BE51E448F880043C985 /* GetThumbnail.swift in Sources */,
+				03F18BEB1E448F880043C985 /* StringExtension.swift in Sources */,
+				03F18BE41E448F880043C985 /* AnalyzeImage.swift in Sources */,
+				03F18BE61E448F880043C985 /* ListDomainSpecificModels.swift in Sources */,
 				0340DED91E3BA0EB006A0C06 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

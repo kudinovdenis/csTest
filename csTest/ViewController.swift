@@ -38,7 +38,8 @@ class ViewController: BasicViewController {
     view.addSubview(startButton)
     startButton.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
     startButton.setTitle("Start", for: .normal)
-    startButton.addTarget(self, action: #selector(processAllPhotos), for: .touchUpInside)
+//    startButton.addTarget(self, action: #selector(processAllPhotos), for: .touchUpInside)
+    startButton.addTarget(self, action: #selector(processAllWithMSServers), for: .touchUpInside)
   }
   
   func setupCollectionView() {
@@ -87,6 +88,24 @@ class ViewController: BasicViewController {
       self.assets = self.photoSearchClient.getAllPhotos()
       DispatchQueue.main.async {
         self.photosCollectionView.reloadData()
+      }
+    }
+  }
+  
+  func processAllWithMSServers() {
+    DispatchQueue.global(qos: .userInitiated).async {
+      for photo in self.assets {
+        autoreleasepool {
+          guard let image = photo.fullSizeImage() else {
+            print("Cannot make fullsize image from asset")
+            return
+          }
+          let tags = MicrosoftImageSearchAPIClient.analyze(image: image)
+          let tagsString = tags.joined(separator: ", ")
+          DispatchQueue.main.async {
+            self.showMessage(withString: tagsString)
+          }
+        }
       }
     }
   }
