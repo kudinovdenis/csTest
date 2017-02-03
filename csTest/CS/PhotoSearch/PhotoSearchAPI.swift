@@ -18,17 +18,29 @@ class PhotoSearch {
     return queue
   }()
   
+  var allPhotoAssets = [PHAsset]()
+  
   func getAllPhotos() -> [PhotoListModel] {
     var assets = [PhotoListModel]()
     let collections = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: nil)
     collections.enumerateObjects({ collection, idx, stop in
       let fetchResults = PHAsset.fetchAssets(in: collection, options: nil)
       fetchResults.enumerateObjects({ (asset, assetIdx, assetStop) in
+        self.allPhotoAssets.append(asset)
         let photoModel = PhotoListModel(asset: asset, photoSearchClient: self)
         assets.append(photoModel)
       })
     })
     return assets
+  }
+  
+  func getPhotoByID(localID: String) -> PhotoListModel? {
+    for asset in allPhotoAssets {
+      if asset.localIdentifier == localID {
+        return PhotoListModel(asset: asset, photoSearchClient: self)
+      }
+    }
+    return nil
   }
   
   func getFullSizeImage(for photo: PhotoListModel) -> UIImage? {

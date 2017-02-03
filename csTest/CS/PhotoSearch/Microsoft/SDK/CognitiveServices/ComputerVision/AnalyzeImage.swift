@@ -40,6 +40,19 @@ typealias AnalyzeImageRequestObject = (resource: Any, visualFeatures: [AnalyzeIm
  - You can try Image Analysation here: https://www.microsoft.com/cognitive-services/en-us/computer-vision-api
  
  */
+
+class ImageTag {
+  
+  var name: String
+  var confidence: Float
+  
+  init(name: String, confidence: Float) {
+    self.name = name
+    self.confidence = confidence
+  }
+  
+}
+
 class AnalyzeImage: NSObject {
     
     
@@ -69,7 +82,7 @@ class AnalyzeImage: NSObject {
         var rawDescriptionCaptions: [String : AnyObject]?
         var descriptionText: String?
         var descriptionTextConfidence: Float?
-        var tags: [String]?
+        var tags: [ImageTag]?
         
         // Color
         var blackAndWhite: Bool?
@@ -305,7 +318,6 @@ class AnalyzeImage: NSObject {
         if let description = dict?["description"] as? [String : AnyObject] {
             
             analyzeObject.rawDescription = description
-            analyzeObject.tags = description["tags"] as? [String]
             
             // Captions values
             if let captionsRaw = description["captions"] as? NSArray {
@@ -316,6 +328,19 @@ class AnalyzeImage: NSObject {
             }
             
         }
+      
+      // TAGS
+      if let tags = dict?["tags"] as? [[String : AnyObject]] {
+        var imageTags = [ImageTag]()
+        for tag in tags {
+          if let tagName = tag["name"] as? String,
+            let tagConfidence = tag["confidence"] as? Float {
+            let imageTag = ImageTag(name: tagName, confidence: tagConfidence)
+            imageTags.append(imageTag)
+          }
+        }
+        analyzeObject.tags = imageTags
+      }
         
         if let color = dict?["color"] as? [String : AnyObject] {
             analyzeObject.blackAndWhite = color["isBWImg"] as? Bool

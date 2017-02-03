@@ -66,7 +66,7 @@ class ViewController: BasicViewController {
     layout.itemSize = CGSize(width: itemSide, height: itemSide)
     photosCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
     view.addSubview(photosCollectionView)
-    photosCollectionView.backgroundColor = UIColor.gray
+    photosCollectionView.backgroundColor = UIColor.white
     photosCollectionView.register(PhotosListCell.self, forCellWithReuseIdentifier: "PhotosListCell")
     photosCollectionView.dataSource = self
   }
@@ -110,9 +110,26 @@ class ViewController: BasicViewController {
   }
   
   func openGrouppedController() {
-    
+    guard let topTags = Storage.shared.topTags(withLimit: 120) else {
+      print("Nothing to show!")
+      return
+    }
+    var taggedPhotoGroups = [TaggedPhotoGroup]()
+    for tagObject in topTags {
+      let taggedPhotoGroup = TaggedPhotoGroup()
+      taggedPhotoGroup.tag = tagObject.stringValue
+      for photo in tagObject.photos {
+        if let photoModel = photoSearchClient.getPhotoByID(localID: photo.assetID!) {
+          taggedPhotoGroup.photoModels.append(photoModel)
+        } else {
+          print("Cannot convert photo with ID to Model")
+        }
+      }
+      taggedPhotoGroups.append(taggedPhotoGroup)
+    }
+    let controller = GrouppingController(frame: view.bounds, tagGroups: taggedPhotoGroups)
+    navigationController?.pushViewController(controller, animated: true)
   }
-  
   
   func processAllPhotos() {
     DispatchQueue.global(qos: .userInitiated).async {

@@ -8,10 +8,22 @@
 
 import RealmSwift
 
+class TaggedPhotoGroup {
+  
+  var tag: String?
+  var photoModels: [PhotoListModel]
+  
+  init() {
+    photoModels = [PhotoListModel]()
+  }
+  
+}
+
 class Storage {
   
   static let shared = Storage()
   let realm = try! Realm()
+  
 }
 
 extension Storage {
@@ -59,8 +71,11 @@ extension Storage {
 extension Storage {
   
   func topTags(withLimit limit: Int) -> [TagObject]? {
-    let result = realm.objects(TagObject.self).sorted(byKeyPath: "photos.count", ascending: false)
-    return Array(result.suffix(5))
+    let result = realm.objects(TagObject.self).sorted { obj1, obj2 -> Bool in
+      return obj1.photos.count < obj2.photos.count
+    }
+//    let result = realm.objects(TagObject.self).sorted(byKeyPath: "photos.count", ascending: false)
+    return Array(result.suffix(limit))
   }
   
 }

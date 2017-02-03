@@ -19,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       print("Window is nil.")
       return false
     }
-    let rootController = ViewController(frame: window.frame)
+    let mainVC = ViewController(frame: window.frame)
+    let nc = UINavigationController(rootViewController: mainVC)
+    nc.isNavigationBarHidden = true
+    let rootController = nc
     window.rootViewController = rootController
     window.makeKeyAndVisible()
     return true
