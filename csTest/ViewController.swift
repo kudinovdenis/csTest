@@ -14,8 +14,10 @@ class ViewController: BasicViewController {
   let photoSearchClient = PhotoSearch()
   
   let startButton = UIButton(type: .system)
+  let openGrouppedViewButton = UIButton(type: .system)
   var photosCollectionView: UICollectionView!
   var processedImageView: UIImageView!
+  let processor = Processor()
   
   var assets = [PhotoListModel]()
   
@@ -32,30 +34,41 @@ class ViewController: BasicViewController {
     setupStartButton()
     setupCollectionView()
     setupProcessedImageView()
+    setupOpenGrouppedViewButton()
   }
   
   func setupStartButton() {
     view.addSubview(startButton)
-    startButton.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
     startButton.setTitle("Start", for: .normal)
 //    startButton.addTarget(self, action: #selector(processAllPhotos), for: .touchUpInside)
     startButton.addTarget(self, action: #selector(processAllWithMSServers), for: .touchUpInside)
   }
   
+  func setupOpenGrouppedViewButton() {
+    view.addSubview(openGrouppedViewButton)
+    openGrouppedViewButton.setTitle("Open Groupped view", for: .normal)
+    openGrouppedViewButton.addTarget(self, action: #selector(openGrouppedController), for: .touchUpInside)
+  }
+  
+  override func viewWillLayoutSubviews() {
+    super.viewWillLayoutSubviews()
+    startButton.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
+    photosCollectionView.frame = CGRect(x: 0,
+                                        y: startButton.frame.origin.y + startButton.frame.size.height,
+                                        width: view.frame.width,
+                                        height: view.frame.height - (startButton.frame.origin.y + startButton.frame.size.height))
+    openGrouppedViewButton.frame = CGRect(x: startButton.frame.maxX + 20, y: startButton.frame.minY, width: 150, height: 50)
+  }
+  
   func setupCollectionView() {
-    let frame = CGRect(x: 0,
-                       y: startButton.frame.origin.y + startButton.frame.size.height,
-                       width: view.frame.width,
-                       height: view.frame.height - (startButton.frame.origin.y + startButton.frame.size.height))
     let layout = UICollectionViewFlowLayout()
     let itemSide = view.frame.width / 5
     layout.itemSize = CGSize(width: itemSide, height: itemSide)
-    photosCollectionView = UICollectionView(frame: frame, collectionViewLayout: layout)
+    photosCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
     view.addSubview(photosCollectionView)
     photosCollectionView.backgroundColor = UIColor.gray
     photosCollectionView.register(PhotosListCell.self, forCellWithReuseIdentifier: "PhotosListCell")
     photosCollectionView.dataSource = self
-    photosCollectionView.delegate = self
   }
   
   func setupProcessedImageView() {
@@ -93,21 +106,11 @@ class ViewController: BasicViewController {
   }
   
   func processAllWithMSServers() {
-    DispatchQueue.global(qos: .userInitiated).async {
-      for photo in self.assets {
-        autoreleasepool {
-          guard let image = photo.fullSizeImage() else {
-            print("Cannot make fullsize image from asset")
-            return
-          }
-          let tags = MicrosoftImageSearchAPIClient.analyze(image: image)
-          let tagsString = tags.joined(separator: ", ")
-          DispatchQueue.main.async {
-            self.showMessage(withString: tagsString)
-          }
-        }
-      }
-    }
+    processor.processPhotos(self.assets, delegate: self)
+  }
+  
+  func openGrouppedController() {
+    
   }
   
   
@@ -203,8 +206,11 @@ extension ViewController: UICollectionViewDataSource {
   
 }
 
-extension ViewController: UICollectionViewDelegate {
+extension ViewController: ProcessorMSVisionDelegate {
   
+  func taggingProceed(for photo: PhotoListModel, tags:[String], _ currentProgress: Int, _ totalProgress: Int) {
+    self.showMessage(withString: "\(currentProgress) / \(totalProgress). Tags: \(tags.joined(separator: ", "))")
+  }
   
 }
 

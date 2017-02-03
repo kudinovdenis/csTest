@@ -15,6 +15,9 @@
 		0340DEF11E3BAB07006A0C06 /* PhotosListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0340DEF01E3BAB07006A0C06 /* PhotosListCell.swift */; };
 		0340DEF41E3BAE2E006A0C06 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0340DEF31E3BAE2E006A0C06 /* BasicViewController.swift */; };
 		0340DEF61E3BB21A006A0C06 /* MessageWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0340DEF51E3BB21A006A0C06 /* MessageWindow.swift */; };
+		034579561E44A0AA003427D8 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034579551E44A0AA003427D8 /* Storage.swift */; };
+		034579581E44A191003427D8 /* PhotoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034579571E44A191003427D8 /* PhotoObject.swift */; };
+		0345795A1E44AD4E003427D8 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034579591E44AD4E003427D8 /* Processor.swift */; };
 		03F18BD51E448E910043C985 /* MicrosoftImageSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BD41E448E910043C985 /* MicrosoftImageSearchAPI.swift */; };
 		03F18BE31E448F880043C985 /* CognitiveServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BD81E448F880043C985 /* CognitiveServices.swift */; };
 		03F18BE41E448F880043C985 /* AnalyzeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDA1E448F880043C985 /* AnalyzeImage.swift */; };
@@ -69,6 +72,9 @@
 		0340DEF01E3BAB07006A0C06 /* PhotosListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosListCell.swift; sourceTree = "<group>"; };
 		0340DEF31E3BAE2E006A0C06 /* BasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 		0340DEF51E3BB21A006A0C06 /* MessageWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageWindow.swift; sourceTree = "<group>"; };
+		034579551E44A0AA003427D8 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		034579571E44A191003427D8 /* PhotoObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoObject.swift; sourceTree = "<group>"; };
+		034579591E44AD4E003427D8 /* Processor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
 		03F18BD41E448E910043C985 /* MicrosoftImageSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrosoftImageSearchAPI.swift; sourceTree = "<group>"; };
 		03F18BD81E448F880043C985 /* CognitiveServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CognitiveServices.swift; sourceTree = "<group>"; };
 		03F18BDA1E448F880043C985 /* AnalyzeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeImage.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 		0340DED71E3BA0EB006A0C06 /* csTest */ = {
 			isa = PBXGroup;
 			children = (
+				034579541E44A098003427D8 /* Storage */,
 				0340DEEB1E3BA4E8006A0C06 /* CS */,
 				0340DED81E3BA0EB006A0C06 /* AppDelegate.swift */,
 				0340DEDA1E3BA0EB006A0C06 /* ViewController.swift */,
@@ -150,6 +157,7 @@
 				0340DEF21E3BAE25006A0C06 /* Basic */,
 				0340DEEF1E3BAAD5006A0C06 /* PhotosList */,
 				0340DEEC1E3BA4E8006A0C06 /* PhotoSearch */,
+				034579591E44AD4E003427D8 /* Processor.swift */,
 			);
 			path = CS;
 			sourceTree = "<group>";
@@ -180,6 +188,15 @@
 				0340DEF51E3BB21A006A0C06 /* MessageWindow.swift */,
 			);
 			path = Basic;
+			sourceTree = "<group>";
+		};
+		034579541E44A098003427D8 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				034579551E44A0AA003427D8 /* Storage.swift */,
+				034579571E44A191003427D8 /* PhotoObject.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		03F18BD31E448E750043C985 /* Microsoft */ = {
@@ -418,11 +435,14 @@
 				03F18BEA1E448F880043C985 /* JSONNSDataExtension.swift in Sources */,
 				03F18BE71E448F880043C985 /* OCR.swift in Sources */,
 				0340DEF11E3BAB07006A0C06 /* PhotosListCell.swift in Sources */,
+				034579561E44A0AA003427D8 /* Storage.swift in Sources */,
 				03F18BD51E448E910043C985 /* MicrosoftImageSearchAPI.swift in Sources */,
 				03FE3AED1E40F01000C96D5B /* PhotoListModel.swift in Sources */,
+				0345795A1E44AD4E003427D8 /* Processor.swift in Sources */,
 				03F18BE81E448F880043C985 /* RecognizeDomainSpecificContent.swift in Sources */,
 				0340DEF41E3BAE2E006A0C06 /* BasicViewController.swift in Sources */,
 				03F18BE31E448F880043C985 /* CognitiveServices.swift in Sources */,
+				034579581E44A191003427D8 /* PhotoObject.swift in Sources */,
 				0340DEEE1E3BA4F8006A0C06 /* PhotoSearchAPI.swift in Sources */,
 				03F18BE91E448F880043C985 /* TagImage.swift in Sources */,
 				0340DEF61E3BB21A006A0C06 /* MessageWindow.swift in Sources */,
