@@ -121,6 +121,8 @@
 		22D05E5E1E44AC26004CED84 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		22D05E631E44AC26004CED84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22D05E651E44AC26004CED84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22D05E8D1E488C85004CED84 /* csTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = csTest.entitlements; sourceTree = "<group>"; };
+		22D05E8E1E488C8B004CED84 /* iMessExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iMessExtension.entitlements; sourceTree = "<group>"; };
 		6606FB33EE1B1B62A0795F35 /* Pods_iMessExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMessExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27A30892EA438F4E7E3983E /* Pods-csTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-csTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-csTest/Pods-csTest.debug.xcconfig"; sourceTree = "<group>"; };
 		CD9076F5C4DD51888640D9F5 /* Pods_csTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_csTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 		0340DED71E3BA0EB006A0C06 /* csTest */ = {
 			isa = PBXGroup;
 			children = (
+				22D05E8D1E488C85004CED84 /* csTest.entitlements */,
 				0345795B1E44C615003427D8 /* GrouppedView */,
 				034579541E44A098003427D8 /* Storage */,
 				0340DEEB1E3BA4E8006A0C06 /* CS */,
@@ -302,6 +305,7 @@
 		22D05E5D1E44AC26004CED84 /* iMessExtension */ = {
 			isa = PBXGroup;
 			children = (
+				22D05E8E1E488C8B004CED84 /* iMessExtension.entitlements */,
 				22D05E5E1E44AC26004CED84 /* MessagesViewController.swift */,
 				22D05E631E44AC26004CED84 /* Assets.xcassets */,
 				22D05E651E44AC26004CED84 /* Info.plist */,
@@ -378,11 +382,21 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 4ER6MMX235;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					22D05E591E44AC26004CED84 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 4ER6MMX235;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -685,6 +699,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = csTest/csTest.entitlements;
 				DEVELOPMENT_TEAM = 4ER6MMX235;
 				INFOPLIST_FILE = csTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -701,6 +716,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = csTest/csTest.entitlements;
 				DEVELOPMENT_TEAM = 4ER6MMX235;
 				INFOPLIST_FILE = csTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -716,6 +732,7 @@
 			baseConfigurationReference = 0F1EEA1C88B294B6A761C5FD /* Pods-iMessExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = iMessExtension/iMessExtension.entitlements;
 				DEVELOPMENT_TEAM = 4ER6MMX235;
 				INFOPLIST_FILE = iMessExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -732,6 +749,7 @@
 			baseConfigurationReference = F0346B265BAC67AC60C8542B /* Pods-iMessExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = iMessExtension/iMessExtension.entitlements;
 				DEVELOPMENT_TEAM = 4ER6MMX235;
 				INFOPLIST_FILE = iMessExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

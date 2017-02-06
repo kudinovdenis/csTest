@@ -9,12 +9,13 @@
 import UIKit
 import Messages
 import Photos
+import RealmSwift
 
 class MessagesViewController: MSMessagesAppViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Realm.configureSharedStorageAsDefault()
     }
     
     lazy var vc : ViewController = {

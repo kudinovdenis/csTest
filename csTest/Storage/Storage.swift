@@ -80,7 +80,17 @@ extension Storage {
   
 }
 
-
+extension Realm {
+    
+    class func configureSharedStorageAsDefault() {
+        let directory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.acronis.csTest")!
+        let realmPath = directory.appendingPathComponent("db.realm")
+        var conf = Realm.Configuration()
+        conf.fileURL = realmPath
+        Realm.Configuration.defaultConfiguration = conf
+    }
+    
+}
 
 
 
