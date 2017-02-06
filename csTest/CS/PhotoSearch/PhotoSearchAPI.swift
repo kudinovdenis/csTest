@@ -11,14 +11,14 @@ import Photos
 
 class PhotoSearch {
   
+  var allPhotoAssets = [PHAsset]()
+  
   lazy var tasksQueue: OperationQueue = {
     var queue = OperationQueue()
     queue.name = "Tasks operation queue"
     queue.qualityOfService = .userInitiated
     return queue
   }()
-  
-  var allPhotoAssets = [PHAsset]()
   
   func getAllPhotos() -> [PhotoListModel] {
     var assets = [PhotoListModel]()

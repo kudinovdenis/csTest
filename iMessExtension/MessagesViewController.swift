@@ -126,10 +126,11 @@ extension MessagesViewController: ViewControllerDelegate {
             image = result!
         })
         
-        layout.imageTitle = photo.tags.first?.stringValue
-        layout.imageSubtitle = photo.tags[1].stringValue
-        layout.caption = photo.tags[2].stringValue
-        layout.subcaption = photo.tags[3].stringValue
+//            layout.imageTitle = photo.tags.first?.stringValue
+//            layout.imageSubtitle = photo.tags[1].stringValue
+            layout.caption = photo.tags.first?.stringValue
+            layout.subcaption = photo.tags.last?.stringValue
+        
         layout.trailingCaption = "Shared via Acronis™ True Image™"
         
         layout.image = image
