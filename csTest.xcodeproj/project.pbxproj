@@ -56,6 +56,8 @@
 		22D05E881E44D0AA004CED84 /* RecognizeDomainSpecificContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDE1E448F880043C985 /* RecognizeDomainSpecificContent.swift */; };
 		22D05E891E44D0AA004CED84 /* TagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDF1E448F880043C985 /* TagImage.swift */; };
 		22D05E8A1E44D0B0004CED84 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BE21E448F880043C985 /* StringExtension.swift */; };
+		22D05E8B1E488A6F004CED84 /* GrouppingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345795C1E44C621003427D8 /* GrouppingController.swift */; };
+		22D05E8C1E488A72004CED84 /* GrouppedCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345795E1E44DE25003427D8 /* GrouppedCollectionHeader.swift */; };
 		CA1BC6A2C594BBD9B6CC095A /* Pods_csTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9076F5C4DD51888640D9F5 /* Pods_csTest.framework */; };
 		F8795FC71E69FCECDDECAA51 /* Pods_iMessExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6606FB33EE1B1B62A0795F35 /* Pods_iMessExtension.framework */; };
 /* End PBXBuildFile section */
@@ -536,9 +538,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D05E8C1E488A72004CED84 /* GrouppedCollectionHeader.swift in Sources */,
 				22D05E861E44D0AA004CED84 /* ListDomainSpecificModels.swift in Sources */,
 				22D05E831E44D0A1004CED84 /* CognitiveServices.swift in Sources */,
 				22D05E851E44D0AA004CED84 /* GetThumbnail.swift in Sources */,
+				22D05E8B1E488A6F004CED84 /* GrouppingController.swift in Sources */,
 				22D05E6D1E44CF6B004CED84 /* ViewController.swift in Sources */,
 				22D05E881E44D0AA004CED84 /* RecognizeDomainSpecificContent.swift in Sources */,
 				22D05E7E1E44CFC8004CED84 /* MicrosoftImageSearchAPI.swift in Sources */,
