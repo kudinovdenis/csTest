@@ -18,6 +18,8 @@
 		034579561E44A0AA003427D8 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034579551E44A0AA003427D8 /* Storage.swift */; };
 		034579581E44A191003427D8 /* PhotoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034579571E44A191003427D8 /* PhotoObject.swift */; };
 		0345795A1E44AD4E003427D8 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034579591E44AD4E003427D8 /* Processor.swift */; };
+		0345795D1E44C621003427D8 /* GrouppingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345795C1E44C621003427D8 /* GrouppingController.swift */; };
+		0345795F1E44DE25003427D8 /* GrouppedCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0345795E1E44DE25003427D8 /* GrouppedCollectionHeader.swift */; };
 		03F18BD51E448E910043C985 /* MicrosoftImageSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BD41E448E910043C985 /* MicrosoftImageSearchAPI.swift */; };
 		03F18BE31E448F880043C985 /* CognitiveServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BD81E448F880043C985 /* CognitiveServices.swift */; };
 		03F18BE41E448F880043C985 /* AnalyzeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F18BDA1E448F880043C985 /* AnalyzeImage.swift */; };
@@ -96,6 +98,8 @@
 		034579551E44A0AA003427D8 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		034579571E44A191003427D8 /* PhotoObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoObject.swift; sourceTree = "<group>"; };
 		034579591E44AD4E003427D8 /* Processor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
+		0345795C1E44C621003427D8 /* GrouppingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrouppingController.swift; sourceTree = "<group>"; };
+		0345795E1E44DE25003427D8 /* GrouppedCollectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrouppedCollectionHeader.swift; sourceTree = "<group>"; };
 		03F18BD41E448E910043C985 /* MicrosoftImageSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrosoftImageSearchAPI.swift; sourceTree = "<group>"; };
 		03F18BD81E448F880043C985 /* CognitiveServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CognitiveServices.swift; sourceTree = "<group>"; };
 		03F18BDA1E448F880043C985 /* AnalyzeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeImage.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 		0340DED71E3BA0EB006A0C06 /* csTest */ = {
 			isa = PBXGroup;
 			children = (
+				0345795B1E44C615003427D8 /* GrouppedView */,
 				034579541E44A098003427D8 /* Storage */,
 				0340DEEB1E3BA4E8006A0C06 /* CS */,
 				0340DED81E3BA0EB006A0C06 /* AppDelegate.swift */,
@@ -222,6 +227,15 @@
 				034579571E44A191003427D8 /* PhotoObject.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		0345795B1E44C615003427D8 /* GrouppedView */ = {
+			isa = PBXGroup;
+			children = (
+				0345795C1E44C621003427D8 /* GrouppingController.swift */,
+				0345795E1E44DE25003427D8 /* GrouppedCollectionHeader.swift */,
+			);
+			path = GrouppedView;
 			sourceTree = "<group>";
 		};
 		03F18BD31E448E750043C985 /* Microsoft */ = {
@@ -492,9 +506,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0345795F1E44DE25003427D8 /* GrouppedCollectionHeader.swift in Sources */,
 				03F18BEA1E448F880043C985 /* JSONNSDataExtension.swift in Sources */,
 				03F18BE71E448F880043C985 /* OCR.swift in Sources */,
 				0340DEF11E3BAB07006A0C06 /* PhotosListCell.swift in Sources */,
+				0345795D1E44C621003427D8 /* GrouppingController.swift in Sources */,
 				034579561E44A0AA003427D8 /* Storage.swift in Sources */,
 				03F18BD51E448E910043C985 /* MicrosoftImageSearchAPI.swift in Sources */,
 				03FE3AED1E40F01000C96D5B /* PhotoListModel.swift in Sources */,

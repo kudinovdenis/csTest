@@ -36,7 +36,9 @@ class MicrosoftImageSearchAPIClient {
         print(object!)
         if let objectTags = object?.tags {
           for tag in objectTags {
-            tags.append(tag)
+            if (tag.confidence > 0.6) {
+              tags.append(tag.name)
+            }
           }
         }
         group.leave()
