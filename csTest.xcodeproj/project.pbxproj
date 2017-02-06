@@ -374,7 +374,7 @@
 				TargetAttributes = {
 					0340DED41E3BA0EB006A0C06 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = RSZ9VPARRW;
+						DevelopmentTeam = 4ER6MMX235;
 						ProvisioningStyle = Automatic;
 					};
 					22D05E591E44AC26004CED84 = {
@@ -681,9 +681,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RSZ9VPARRW;
+				DEVELOPMENT_TEAM = 4ER6MMX235;
 				INFOPLIST_FILE = csTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acronis.kudinovdenis.csTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -697,9 +697,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RSZ9VPARRW;
+				DEVELOPMENT_TEAM = 4ER6MMX235;
 				INFOPLIST_FILE = csTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acronis.kudinovdenis.csTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -714,7 +714,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 4ER6MMX235;
 				INFOPLIST_FILE = iMessExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acronis.kudinovdenis.csTest.iMessExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -730,7 +730,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 4ER6MMX235;
 				INFOPLIST_FILE = iMessExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acronis.kudinovdenis.csTest.iMessExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
